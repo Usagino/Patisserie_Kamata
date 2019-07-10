@@ -1,4 +1,4 @@
-# ec-site
+# Patisserie_Kamata.
 
 > Nuxt.js project
 
