@@ -1,6 +1,7 @@
 <template lang="pug">
   section.container
     vue_menu
+    .first
 </template>
 
 <script>
@@ -25,4 +26,12 @@
 </script>
 
 <style lang="scss" scoped>
+.container{
+  margin-left: 4rem;
+  .first{
+    width: 100%;
+    height: 100vh;
+    background: $primary;
+  }
+}
 </style>

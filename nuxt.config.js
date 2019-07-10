@@ -36,6 +36,9 @@ module.exports = {
       '~/assets/style/_reset.scss',
     ],
   },
+  css: [
+    '@/assets/style/reset.css',
+  ],
   webfontloader: {
     google: {
       families: ['Noto+Sans+JP','Raleway']
