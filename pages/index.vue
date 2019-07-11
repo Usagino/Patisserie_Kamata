@@ -14,20 +14,13 @@
     components: {
       vue_menu
     },
-
-    methods: {
-
-    },
-    mounted(){
-    },
-    data () {
-    },
   }
 </script>
 
 <style lang="scss" scoped>
 .container{
   margin-left: 4rem;
+  height: 500vh;
   .first{
     width: 100%;
     height: 100vh;
