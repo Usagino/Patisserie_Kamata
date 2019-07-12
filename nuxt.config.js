@@ -33,6 +33,7 @@ module.exports = {
   styleResources: {
     sass: [
       '~/assets/style/_variable.scss',
+      '~/assets/style/_foundation.scss'
     ],
   },
   css: [
