@@ -1,7 +1,7 @@
 $text_color:#161616;
 $bg_white: #ffffff;
 $primary:#F9D5D5;
-$primary_daken:#D66D6D;
+$primary_daken:#F19F9F;
 
 @mixin full_size{
   height: 100%;
@@ -42,5 +42,11 @@ $breakpoints: (
 @mixin mq($breakpoint: md) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
+  }
+}
+@mixin space_reset{
+  & > *:first-child{
+    margin-top: 0px;
+    margin-left: 0px
   }
 }

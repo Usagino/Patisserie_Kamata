@@ -23,8 +23,7 @@ module.exports = {
     }
   },
   server: {
-    port: 3000, // デフォルト: 3000
-    // host: '0.0.0.0', // デフォルト: localhost
+    port: 3000
   },
   modules: [
     '@nuxtjs/style-resources',
@@ -32,16 +31,19 @@ module.exports = {
   ],
   styleResources: {
     sass: [
-      '~/assets/style/_variable.scss',
-      '~/assets/style/_foundation.scss'
+      '@/assets/style/_variable.scss',
+      '@/assets/style/_foundation.scss'
     ],
   },
   css: [
     '@/assets/style/reset.css',
   ],
+  plugins: [
+    { src: '~/plugins/vue-carousel', ssr: false }
+  ],
   webfontloader: {
     google: {
-      families: ['Noto+Sans+JP','Raleway']
+      families: ['Sawarabi+Mincho','kokoro','hannari']
     }
   },
   mode: 'universal',

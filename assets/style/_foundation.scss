@@ -7,10 +7,22 @@ a:hover{
   opacity: 0.7;
 }
 .container{
-  margin-left: 4rem;
+  margin-left: 5rem;
 }
 @include mq(sm){
   .container{
     margin-left: 0px !important;
+  }
+}
+
+body {
+  h1,h2,h3{
+    color: $bg_white;
+    font-weight: normal;
+    font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  }
+  p,a{
+    color: $bg_white;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   }
 }

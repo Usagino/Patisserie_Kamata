@@ -566,3 +566,7 @@ video {
   color: #fff;
   text-shadow: none;
 }
+body {
+  background-image: url("/image/back_pattern.png");
+  background-repeat: repeat;
+}
