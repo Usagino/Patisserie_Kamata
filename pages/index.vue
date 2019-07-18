@@ -22,26 +22,28 @@
         .gallery__title
           h1.gallery__title__text SHOP INFO
           p.gallery__title__subtext 店舗情報
-        carousel(
-          :per-page="1"
-          :autoplay="true"
-          :loop="true" )
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
+        <no-ssr>
+          carousel(
+            :per-page="1"
+            :autoplay="true"
+            :loop="true" )
+            slide.slide(v-for="")
+              nuxt-link(to="/").slide__wrap
+                h1 Patisserie NAOHIRA
+                img(src="/image/dummy.png")
+            slide.slide(v-for="")
+              nuxt-link(to="/").slide__wrap
+                h1 Patisserie NAOHIRA
+                img(src="/image/dummy.png")
+            slide.slide(v-for="")
+              nuxt-link(to="/").slide__wrap
+                h1 Patisserie NAOHIRA
+                img(src="/image/dummy.png")
+            slide.slide(v-for="")
+              nuxt-link(to="/").slide__wrap
+                h1 Patisserie NAOHIRA
+                img(src="/image/dummy.png")
+        </no-ssr>
         .gallery__link
           link_button
         .gallery__bg
