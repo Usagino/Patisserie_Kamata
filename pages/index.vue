@@ -23,11 +23,9 @@
           h1.gallery__title__text SHOP INFO
           p.gallery__title__subtext 店舗情報
         carousel(
-          perPage="1"
-          autoplay="true"
-          paginationEnabled="false"
-          paginationSize="0"
-          loop="true" )
+          :per-page="1"
+          :autoplay="true"
+          :loop="true" )
           slide.slide(v-for="")
             nuxt-link(to="/").slide__wrap
               h1 Patisserie NAOHIRA
@@ -56,8 +54,6 @@
   import vue_footer from '@/components/vueFooter';
   import vue_button from '@/components/lottie_button';
   import link_button from '@/components/link_button';
-
-
   // library
   export default {
     components: {
