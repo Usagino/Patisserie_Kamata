@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Patisserie NAOHIRA",
+    "adress": "東京都大田区蒲田2-18-22 TACビル1F",
+    "tell": "03-6424-5033",
+    "website": "www.patisserie-naohira.com",
+    "map": "https://goo.gl/maps/e9JSP7HZXFr6Uv1j8"
+  },
+  {
+    "name": "patisserie MANO",
+    "adress": "東京都大田区蒲田2-18-22 TACビル1F",
+    "tell": "03-6424-5033",
+    "website": "www.patisserie-naohira.com",
+    "map": "https://goo.gl/maps/e9JSP7HZXFr6Uv1j8"
+  },
+  {
+    "name": "Rouge Blanche",
+    "adress": "東京都大田区蒲田2-18-22 TACビル1F",
+    "tell": "03-6424-5033",
+    "website": "www.patisserie-naohira.com",
+    "map": "https://goo.gl/maps/e9JSP7HZXFr6Uv1j8"
+  },
+  {
+    "name": "Belle Fille",
+    "adress": "東京都大田区蒲田2-18-22 TACビル1F",
+    "tell": "03-6424-5033",
+    "website": "www.patisserie-naohira.com",
+    "map": "https://goo.gl/maps/e9JSP7HZXFr6Uv1j8"
+  }
+]

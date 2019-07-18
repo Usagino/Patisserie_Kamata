@@ -17,11 +17,11 @@
         nav.menu-list__nav
           ul.menu-list__nav__list
             li.menu-list__nav__list__item
-              nuxt-link(to="/aa") Home
+              nuxt-link(to="/") Home
             li.menu-list__nav__list__item
-              nuxt-link(to="/aa") About
+              nuxt-link(to="/about") About
             li.menu-list__nav__list__item
-              nuxt-link(to="/aa") Shop
+              nuxt-link(to="/shops") Shops
             li.menu-list__nav__list__item
               nuxt-link(to="/aa") Feature
         img.menu-list__image(src="/image/menu_image.png")

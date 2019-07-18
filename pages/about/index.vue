@@ -2,51 +2,24 @@
   section.container
     vue_menu
     .first
+      img(src="/image/logo.svg")
     .movie
       .movie__bg
       .movie__wrap
         .movie__title
-          h1.movie__title__text 蒲田のケーキ屋さん。
-          img.movie__title__logo(src="/image/logo.svg")
+          h1.movie__title__text ABOUT
           span.movie__title__bar
         .movie__contents
           <iframe width="680" height="400" src="https://www.youtube.com/embed/vWaRiD5ym74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         .movie__description
-          h1.movie__description__title ABOUT
           .movie__description__text
-            p ”Patisserie_Kamata.”は、蒲田にあるケーキ屋さんを紹介するサイトです。
+            h1 「東京は蒲田にある素敵なケーキ屋さん」を紹介するサイトです。
+            p 蒲田にある素敵なケーキ屋さんを紹介するサイトです。このサイトでは、「Patisserie NAOHIRA」、「patisserie MANO」、「Rouge Blanche」、「Belle Fille」に取材協力させていただきました。
+            p 地域に愛される、みんなが笑顔になれる暖かい場所が蒲田にはたくさんあり、
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            link_button
-    .gallery
-      .gallery__wrap
-        .gallery__title
-          h1.gallery__title__text SHOP INFO
-          p.gallery__title__subtext 店舗情報
-        carousel(
-          perPage="1"
-          autoplay="true"
-          paginationEnabled="false"
-          paginationSize="0"
-          loop="true" )
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-          slide.slide(v-for="")
-            nuxt-link(to="/").slide__wrap
-              h1 Patisserie NAOHIRA
-              img(src="/image/dummy.png")
-        .gallery__link
-          link_button
-        .gallery__bg
+        .movie__thanks
+          p Special Thanks
+          p 「Patisserie NAOHIRA」「patisserie MANO」「Rouge Blanche」「Belle Fille」(順不同)
     vue_footer
 </template>
 
@@ -54,17 +27,11 @@
   // components
   import vue_menu from '@/components/vueMenu';
   import vue_footer from '@/components/vueFooter';
-  import vue_button from '@/components/lottie_button';
-  import link_button from '@/components/link_button';
-
-
   // library
   export default {
     components: {
       vue_menu,
       vue_footer,
-      vue_button,
-      link_button
     }
   }
 </script>
@@ -74,24 +41,28 @@
 }
 </style>
 <style lang="scss" scoped>
-
-.container{
   .first{
-    width: 100%;
-    height: 100vh;
     background: $primary;
+    height: 30vh;
+    width: 100%;
+    @include middle;
+    img{
+      height: 10vh;
+      width: auto;
+    }
   }
+
   .movie{
     padding: 4rem 0;
-
     position: relative;
+    margin: 2rem 0 10rem;
     &__bg{
       position: absolute;
       bottom: 0;
       z-index: -1;
       content: "";
       width: 100%;
-      height: 50vh;
+      height: 80vh;
       background: $primary_daken;
     }
     &__wrap{
@@ -122,7 +93,13 @@
         }
     }
     &__contents{
-
+      width: 100%;
+      height: 400px;
+      padding: 0 24vw;
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
     }
     &__description{
       margin-top: 3rem;
@@ -163,66 +140,8 @@
         margin-top: auto;
       }
     }
-  }
-  .gallery{
-    margin-top: 5rem;
-    &__wrap{
-      position: relative;
-    }
-    &__bg{
-      position: absolute;
-      bottom: 0;
-      z-index: -1;
-      content: "";
-      width: 100%;
-      height: 50vh;
-      background: $primary_daken;
-    }
-    &__title{
-      padding: 2rem;
-
-      &__text{
-        color: $primary_daken;
-        text-align: center;
-      }
-      &__subtext{
-        color: $primary_daken;
-        text-align: center;
-        @include middle;
-        &:after,&:before{
-          margin: 0 1rem;
-          width: 3rem;
-          height: 1px;
-          display: inline-block;
-          content: "";
-          background: $primary_daken;
-        }
-      }
-    }
-    .slide{
-      &__wrap{
-        padding: 0 5rem;
-        position: relative;
-        @include full_size;
-        display: flex;
-        justify-content: flex-end;
-        h1{
-          position: absolute;
-          top: 0;bottom: 0;
-          left: 5rem;
-          z-index: 1;
-          display: inline-block;
-          height: 4rem;
-          width: auto;
-          margin: auto;
-          font-size: 3rem;
-        }
-      }
-    }
-    &__link{
-      padding: 0 5rem 5rem;
+    &__thanks{
+      padding: 6rem 0;
     }
   }
-
-}
 </style>
