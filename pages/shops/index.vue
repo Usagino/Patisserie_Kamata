@@ -9,6 +9,7 @@
           h1 {{shop.name}}
           p {{shop.adress}}
           p {{shop.tell}}
+          a(:href="shop.website" target="_brank") webiste
     vue_footer
 </template>
 

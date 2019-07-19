@@ -41,11 +41,7 @@
     }
   }
 </script>
-<style>
-.VueCarousel-pagination {
-  display: none !important;
-}
-</style>
+
 <style lang="scss" scoped>
   .first{
     background: $primary;

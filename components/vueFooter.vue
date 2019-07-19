@@ -4,11 +4,11 @@
       img.footer__top__logo(src="/image/logo_white.svg")
       ul.footer__top__list
         li.footer__top__list__item
-          nuxt-link(to="/aa") Home
+          nuxt-link(to="/") Home
         li.footer__top__list__item
-          nuxt-link(to="/aa") About
+          nuxt-link(to="/about") About
         li.footer__top__list__item
-          nuxt-link(to="/aa") Shop
+          nuxt-link(to="/shops") Shop
     .footer__bottom
       p Copyright © 2019 group-A. All Rights Reserved.
 </template>
