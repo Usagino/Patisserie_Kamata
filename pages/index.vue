@@ -67,12 +67,12 @@
       link_button,
       cake
     },
-    // mounted () {
-    //   this.$nextTick(() => {
-    //     this.$nuxt.$loading.start()
-    //     setTimeout(() => this.$nuxt.$loading.finish(), 9000)
-    //   })
-    // }
+    mounted () {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+      })
+    }
   }
 </script>
 <style>
@@ -87,7 +87,7 @@
     width: 100%;
     height: 100vh;
     background: $primary;
-    background-image: url("/image/dummy.png");
+    background-image: url("/image/cake.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

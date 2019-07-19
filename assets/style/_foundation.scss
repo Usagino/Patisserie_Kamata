@@ -11,6 +11,8 @@ a:hover{
 }
 @include mq(sm){
   .container{
+    width: 100vw !important;
+    overflow-x: hidden !important;
     margin-left: 0px !important;
   }
 }

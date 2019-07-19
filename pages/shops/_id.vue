@@ -16,7 +16,6 @@
         .single__box__image
           img(:src='"/image/shop/"+ $route.params.id +"_2.png"')
           img(:src='"/image/shop/"+ $route.params.id +"_2.png"').shadow
-
         .single__box__text
           h1 おすすめ商品
           p {{ shop_list[$route.params.id].single.introduce }}
@@ -61,9 +60,9 @@
 </script>
 
 <style lang="scss" scoped>
-  .container{
-    margin-left: 5rem !important;
-  }
+  // .container{
+  //   margin-left: 5rem !important;
+  // }
 
   .first{
     width: 100%;
@@ -128,5 +127,10 @@
         }
       }
     }
+  }
+
+
+  @include mq(sm){
+
   }
 </style>
