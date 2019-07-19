@@ -41,10 +41,12 @@ module.exports = {
   plugins: [
     { src: '~/plugins/vue-carousel', ssr: false }
   ],
+
   webfontloader: {
     google: {
       families: ['Sawarabi+Mincho','kokoro','hannari']
     }
   },
+  loading: '~/components/loading.vue',
   mode: 'universal',
 }

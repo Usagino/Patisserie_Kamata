@@ -2,6 +2,7 @@
   section.container
     vue_menu
     .first
+      img(src="image/logo_white.svg")
     .movie
       .movie__bg
       .movie__wrap
@@ -56,13 +57,21 @@
   import vue_footer from '@/components/vueFooter';
   import vue_button from '@/components/lottie_button';
   import link_button from '@/components/link_button';
+  import cake from '@/components/lottie_cake'
   // library
   export default {
     components: {
       vue_menu,
       vue_footer,
       vue_button,
-      link_button
+      link_button,
+      cake
+    },
+    mounted () {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+      })
     }
   }
 </script>
@@ -78,6 +87,28 @@
     width: 100%;
     height: 100vh;
     background: $primary;
+    background-image: url("/image/dummy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    &:before{
+      background-color: #{$primary_daken}20;
+      /* 自由に位置指定 */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: ' ';
+    }
+    img{
+      @include absolute_middle;
+      width: 50%;
+      min-width: 280px;
+      max-width: 700px;
+      height: auto;
+    }
   }
   .movie{
     padding: 4rem 0;
