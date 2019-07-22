@@ -72,6 +72,8 @@
         this.$nuxt.$loading.start()
         setTimeout(() => this.$nuxt.$loading.finish(), 9000)
       })
+      const first_el = document.querySelector(".first");
+      first_el.style.backgroundImage = 'url("/image/cake.gif")'
     }
   }
 </script>
@@ -82,37 +84,173 @@
 </style>
 <style lang="scss" scoped>
 
-.container{
-  .first{
+
+.first{
+  width: 100%;
+  height: 100vh;
+  background: $primary;
+  // background-image: url("/image/cake.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  &:before{
+    background-color: #{$primary_daken}20;
+    /* 自由に位置指定 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+  }
+  img{
+    @include absolute_middle;
+    width: 50%;
+    min-width: 280px;
+    max-width: 700px;
+    height: auto;
+  }
+}
+.movie{
+  padding: 4rem 0;
+
+  position: relative;
+  &__bg{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    content: "";
     width: 100%;
-    height: 100vh;
-    background: $primary;
-    background-image: url("/image/cake.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    &:before{
-      background-color: #{$primary_daken}20;
-      /* 自由に位置指定 */
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      content: ' ';
+    height: 50vh;
+    background: $primary_daken;
+  }
+  &__wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    margin: auto;
+    display: inline-block;
+    flex-direction: column;
+    @include middle;
+      &__text{
+        color: $text_color;
+      }
+      &__logo{
+        height: 2rem;
+        width: auto;
+      }
+      &__bar{
+        margin-top: 1rem;
+        content: "";
+        width: 1px;
+        height: 4rem;
+        background: $text_color;
+      }
+  }
+  &__contents{
+
+  }
+  &__description{
+    margin-top: 3rem;
+    padding: 0 24vw;
+    display: flex;
+    flex-direction: row;
+    &__title{
+      font-size: 3rem;
+      padding-right: 5.5rem;
     }
-    img{
-      @include absolute_middle;
-      width: 50%;
-      min-width: 280px;
-      max-width: 700px;
-      height: auto;
+    &__text{
+      &__link{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        &__text{
+          margin-right: 1rem;
+        }
+        &__button{
+          width: 3rem !important;
+          height: auto !important;
+          margin: 0 !important;
+        }
+      }
+    }
+    p{
+      margin-top: 2rem;
+    }
+    p:first-child{
+      margin-top: auto;
     }
   }
+}
+.gallery{
+  margin-top: 5rem;
+  &__wrap{
+    position: relative;
+  }
+  &__bg{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    background: $primary_daken;
+  }
+  &__title{
+    padding: 2rem;
+
+    &__text{
+      color: $primary_daken;
+      text-align: center;
+    }
+    &__subtext{
+      color: $primary_daken;
+      text-align: center;
+      @include middle;
+      &:after,&:before{
+        margin: 0 1rem;
+        width: 3rem;
+        height: 1px;
+        display: inline-block;
+        content: "";
+        background: $primary_daken;
+      }
+    }
+  }
+  .slide{
+    &__wrap{
+      padding: 0 5rem;
+      position: relative;
+      @include full_size;
+      display: flex;
+      justify-content: flex-end;
+      h1{
+        position: absolute;
+        top: 0;bottom: 0;
+        left: 5rem;
+        z-index: 1;
+        display: inline-block;
+        height: 4rem;
+        width: auto;
+        margin: auto;
+        font-size: 3rem;
+      }
+    }
+  }
+  &__link{
+    padding: 0 5rem 5rem;
+  }
+}
+
+@include mq(sm){
   .movie{
     padding: 4rem 0;
-
     position: relative;
     &__bg{
       position: absolute;
@@ -134,6 +272,7 @@
       margin: auto;
       display: inline-block;
       flex-direction: column;
+
       @include middle;
         &__text{
           color: $text_color;
@@ -151,16 +290,24 @@
         }
     }
     &__contents{
-
+      width: 100%;
+      height: 300px;
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__bg{
+      height: 130vh;
     }
     &__description{
       margin-top: 3rem;
-      padding: 0 24vw;
+      box-sizing: border-box;
+      padding: 0rem;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       &__title{
-        font-size: 3rem;
-        padding-right: 5.5rem;
+        padding-bottom: 2rem;
       }
       &__text{
         &__link{
@@ -170,13 +317,6 @@
           flex-direction: row;
           &__text{
             margin-right: 1rem;
-            // &:after{
-            //   content: "";
-            //   width: 100%;
-            //   height: 1px;
-            //   background: $bg_white;
-            //   display: inline-block;
-            // }
           }
           &__button{
             width: 3rem !important;
@@ -229,8 +369,11 @@
       }
     }
     .slide{
+      @include full_size;
+      height: 100vh;
+      overflow: hidden;
       &__wrap{
-        padding: 0 5rem;
+        padding: 0rem;
         position: relative;
         @include full_size;
         display: flex;
@@ -238,7 +381,7 @@
         h1{
           position: absolute;
           top: 0;bottom: 0;
-          left: 5rem;
+          left: 0.5rem;
           z-index: 1;
           display: inline-block;
           height: 4rem;
@@ -252,6 +395,5 @@
       padding: 0 5rem 5rem;
     }
   }
-
 }
 </style>
