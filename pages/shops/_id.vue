@@ -18,12 +18,12 @@
           img(:src='"/image/shop/"+ $route.params.id +"_2.png"').shadow
         .single__box__text
           h1 おすすめ商品
-          p {{ shop_list[$route.params.id].single.introduce }}
+          p {{ shop_list[$route.params.id].single.recommend }}
 
       .single__box
         .single__box__text
           h1 お店へのこだわり
-          p {{ shop_list[$route.params.id].single.introduce }}
+          p {{ shop_list[$route.params.id].single.commit }}
         .single__box__image
           img(:src='"/image/shop/"+ $route.params.id +"_3.png"')
           img(:src='"/image/shop/"+ $route.params.id +"_3.png"').shadow
