@@ -29,22 +29,10 @@
             :per-page="1"
             :autoplay="true"
             :loop="true" )
-            slide.slide(v-for="")
-              nuxt-link(to="/").slide__wrap
-                h1 Patisserie NAOHIRA
-                img(src="/image/dummy.png")
-            slide.slide(v-for="")
-              nuxt-link(to="/").slide__wrap
-                h1 Patisserie NAOHIRA
-                img(src="/image/dummy.png")
-            slide.slide(v-for="")
-              nuxt-link(to="/").slide__wrap
-                h1 Patisserie NAOHIRA
-                img(src="/image/dummy.png")
-            slide.slide(v-for="")
-              nuxt-link(to="/").slide__wrap
-                h1 Patisserie NAOHIRA
-                img(src="/image/dummy.png")
+            slide.slide(v-for="(shop,index) in shop_list" :key="index")
+              nuxt-link(:to='"/shops/" + index').slide__wrap
+                h1 {{shop.name}}
+                img(:src='"/image/shop/"+ index +"_3.png"')
         </no-ssr>
         .gallery__link
           link_button
@@ -95,12 +83,10 @@
       }
     },
     mounted () {
-      // this.$nextTick(() => {
-      //   this.$nuxt.$loading.start()
-      //   setTimeout(() => this.$nuxt.$loading.finish(), 9000)
-      // })
-      // const first_el = document.querySelector(".first");
-      // first_el.style.backgroundImage = 'url("/image/cake.gif")'
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+      })
     }
   }
 </script>
@@ -252,7 +238,7 @@
       z-index: -1;
       content: "";
       width: 100%;
-      height: 50vh;
+      height: 60vh;
       background: $primary_daken;
     }
     &__title{
@@ -292,6 +278,11 @@
           width: auto;
           margin: auto;
           font-size: 3rem;
+        }
+        img{
+          height: 70vh;
+          width: 60vw;
+          object-fit: cover;
         }
       }
     }
