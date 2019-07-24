@@ -147,3 +147,103 @@
     }
   }
 </style>
+
+<style lang="scss" scoped>
+  @include mq(sm){
+    .first{
+      background: $primary;
+      height: 30vh;
+      width: 100%;
+      @include middle;
+      img{
+        height: 10vh;
+        width: auto;
+      }
+    }
+
+    .movie{
+      position: relative;
+      margin: 2rem 0 10rem;
+      &__bg{
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        content: "";
+        width: 100%;
+        height: 150vh;
+        background: $primary_daken;
+      }
+      &__wrap{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__title{
+        margin: auto;
+        display: inline-block;
+        flex-direction: column;
+        @include middle;
+          &__text{
+            color: $text_color;
+          }
+          &__logo{
+            height: 2rem;
+            width: auto;
+          }
+          &__bar{
+            margin-top: 1rem;
+            content: "";
+            width: 1px;
+            height: 4rem;
+            background: $text_color;
+          }
+      }
+      &__contents{
+        width: 100%;
+        height: auto;
+        padding: 0 10vw;
+        iframe{
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__description{
+        margin-top: 3rem;
+        padding: 0 10vw;
+        display: flex;
+        flex-direction: row;
+        &__title{
+          font-size: 3rem;
+          padding-right: 5.5rem;
+        }
+        &__text{
+          &__link{
+            margin-top: 3rem;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+            &__text{
+              margin-right: 1rem;
+            }
+            &__button{
+              width: 3rem !important;
+              height: auto !important;
+              margin: 0 !important;
+            }
+          }
+        }
+        p{
+          margin-top: 2rem;
+        }
+        p:first-child{
+          margin-top: auto;
+        }
+      }
+      &__thanks{
+        padding: 6rem 0;
+      }
+    }
+  }
+</style>
