@@ -34,6 +34,8 @@ module.exports = {
       }
     }
   },
+  transpile: [/^vue2-google-maps($|\/)/],
+
   vendor: ['vue2-google-maps'],
   server: {
     port: 3000

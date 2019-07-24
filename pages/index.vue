@@ -39,19 +39,12 @@
           link_button(link="shops")
         .gallery__bg
     .map
-      <no-ssr>
-        GmapMap(
-          :center="{lat:35.562487, lng:139.716074}"
-          :zoom="14"
-          map-type-id="terrain"
-          style="width: 100% ; height: 300px"
-          )
-      </no-ssr>
 
       .map__wrap
         .title
           h1.title__text MAP
           p.title__subtext 地図
+        vueMap
         .map__view
           a(href="/").map__view__item.map__view__bellefille
             img(src="/image/map/bellefille.png")
@@ -77,6 +70,7 @@
   import vue_button from '@/components/lottie_button';
   import link_button from '@/components/link_button';
   import cake from '@/components/lottie_cake'
+  import vueMap from '@/components/vueMap'
   // library
   import shops from '@/assets/json/shops.json'
   export default {
@@ -85,7 +79,8 @@
       vue_footer,
       vue_button,
       link_button,
-      cake
+      cake,
+      vueMap
     },
     data(){
       return {
