@@ -27,7 +27,7 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/style-resources',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
   ],
   styleResources: {
     sass: [

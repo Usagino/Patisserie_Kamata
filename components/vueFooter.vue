@@ -57,6 +57,35 @@
       font-size: 1Arem;
     }
   }
-  @include mq(sm) {
+
+</style>
+
+<style lang="scss" scoped>
+  @include mq(sm){
+    footer{
+      background: $primary_daken;
+      padding: 1rem;
+    }
+    .footer__top{
+      @include full_size;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 1rem;
+      &__logo{
+        height: 2rem;
+        width: auto;
+      }
+      &__list{
+        display: none;
+      }
+    }
+    .footer__bottom{
+      padding-top: 1rem;
+      p{
+        text-align: right;
+        font-size: 0.7rem;
+      }
+    }
   }
 </style>

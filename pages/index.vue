@@ -18,7 +18,7 @@
           .movie__description__text
             p ”Patisserie_Kamata.”は、蒲田にあるケーキ屋さんを紹介するサイトです。
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            link_button
+            link_button(link="about")
     .gallery
       .gallery__wrap
         .title
@@ -30,12 +30,12 @@
             :autoplay="true"
             :loop="true" )
             slide.slide(v-for="(shop,index) in shop_list" :key="index")
-              nuxt-link(:to='"/shops/" + index').slide__wrap
-                h1 {{shop.name}}
+              .slide__wrap
+                nuxt-link(:to='"/shops/" + index') {{shop.name}}
                 img(:src='"/image/shop/"+ index +"_3.png"')
         </no-ssr>
         .gallery__link
-          link_button
+          link_button(link="shops")
         .gallery__bg
     .map
       .map__wrap
@@ -82,12 +82,12 @@
         shop_list: shops
       }
     },
-    mounted () {
-      this.$nextTick(() => {
-        this.$nuxt.$loading.start()
-        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
-      })
-    }
+    // mounted () {
+    //   this.$nextTick(() => {
+    //     this.$nuxt.$loading.start()
+    //     setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+    //   })
+    // }
   }
 </script>
 <style>
@@ -95,8 +95,9 @@
   display: none !important;
 }
 </style>
-<style lang="scss" scoped>
 
+
+<style lang="scss" scoped>
   .title{
     padding: 2rem;
     &__text{
@@ -117,6 +118,7 @@
       }
     }
   }
+
   .first{
     width: 100%;
     height: 100vh;
@@ -140,6 +142,7 @@
       left: 0;
       position: absolute;
       @include full_screen;
+      transform: scale(1.4);
       height: auto;
     }
     img{
@@ -161,7 +164,7 @@
       z-index: -1;
       content: "";
       width: 100%;
-      height: 50vh;
+      height: 60vh;
       background: $primary_daken;
     }
     &__wrap{
@@ -268,7 +271,8 @@
         @include full_size;
         display: flex;
         justify-content: flex-end;
-        h1{
+
+        a{
           position: absolute;
           top: 0;bottom: 0;
           left: 5rem;
@@ -281,7 +285,7 @@
         }
         img{
           height: 70vh;
-          width: 60vw;
+          width: 70vw;
           object-fit: cover;
         }
       }
@@ -344,8 +348,25 @@
       }
     }
   }
+</style>
 
+<style lang="scss" scoped>
   @include mq(sm){
+    .first{
+      &:before{
+      }
+      &__movie{
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 100vh;
+        width: auto;
+        transform: scale(1);
+        height: auto;
+      }
+      img{
+      }
+    }
     .movie{
       padding: 4rem 0;
       position: relative;
@@ -400,7 +421,7 @@
       &__description{
         margin-top: 3rem;
         box-sizing: border-box;
-        padding: 0rem;
+        padding: 0 1rem;
         display: flex;
         flex-direction: column;
         &__title{
@@ -441,7 +462,7 @@
         z-index: -1;
         content: "";
         width: 100%;
-        height: 50vh;
+        height: 70vh;
         background: $primary_daken;
       }
       &__title{
@@ -489,7 +510,62 @@
         }
       }
       &__link{
-        padding: 0 5rem 5rem;
+        padding: 0;
+        padding-bottom: 1rem;
+      }
+    }
+    .map{
+      &__view{
+        background-image: url("/image/map/map.png");
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: cover;
+        width: 100%;
+        height: 70vh;
+        position: relative;
+        &__item{
+          position: absolute;
+          img{
+            width: 120px;
+            height: auto;
+          }
+        }
+        &__bellefille{
+          bottom: 43%;
+          left: 52%;
+        }
+        &__mano{
+          top: 2%;
+          left: 43%;
+        }
+        &__naohira{
+          top: 9%;
+          left: 47%;
+        }
+        &__rouge{
+          top: 20%;
+          left: 40%;
+        }
+      }
+      &__list{
+        padding: 2rem 10vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        &__item{
+          padding: 2rem;
+          background: $bg_white;
+          h2{
+            padding-bottom: 2rem;
+          }
+          h2,p,a{
+            color: $text_color;
+          }
+          a{
+            font-size: 1rem;
+          }
+        }
       }
     }
   }

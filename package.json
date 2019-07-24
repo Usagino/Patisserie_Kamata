@@ -16,6 +16,7 @@
     "@nuxtjs/axios": "^5.4.1",
     "gsap": "^2.1.2",
     "nuxt": "^2.0.0",
+    "nuxt-device-detect": "^1.1.5",
     "nuxt-sass-resources-loader": "^2.0.5",
     "nuxt-webfontloader": "^1.0.0",
     "pug": "^2.0.3",

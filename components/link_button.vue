@@ -1,5 +1,5 @@
 <template lang="pug">
-  nuxt-link.link(to="/")
+  nuxt-link.link(:to="'/' + link")
     .link__text
       p Learn More
     vue_button.link__button
@@ -10,6 +10,9 @@
   export default {
     components:{
       vue_button,
+    },
+    props: {
+      link:String
     }
   }
 </script>

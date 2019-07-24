@@ -22,42 +22,44 @@
               nuxt-link(to="/about") About
             li.menu-list__nav__list__item
               nuxt-link(to="/shops") Shops
-            li.menu-list__nav__list__item
-              nuxt-link(to="/aa") Feature
-        img.menu-list__image(src="/image/menu_image.png")
+        .menu-list__image
+          cake
 </template>
 
 <script>
-import menu_icon from '@/components/lottie_menu'
-import menu_close from '@/components/lottie_close'
-import {TweenMax} from 'gsap'
+  import menu_icon from '@/components/lottie_menu'
+  import menu_close from '@/components/lottie_close'
+  import cake from '@/components/lottie_cake'
 
-export default {
-  components:{
-    menu_icon,
-    menu_close
-  },
-  mounted:()=>{
-    const open = document.querySelector('#open');
-    const close = document.querySelector('#close');
-    TweenMax.set('.menu-list',{
-      opacity:0,
-      display:'none'
-    })
-    open.onclick = () =>{
-      TweenMax.to('.menu-list',0.5,{
-        opacity:1,
-        display:'block'
-      })
-    }
-    close.onclick = () =>{
-      TweenMax.to('.menu-list',0.5,{
+  import {TweenMax} from 'gsap'
+
+  export default {
+    components:{
+      menu_icon,
+      menu_close,
+      cake
+    },
+    mounted:()=>{
+      const open = document.querySelector('#open');
+      const close = document.querySelector('#close');
+      TweenMax.set('.menu-list',{
         opacity:0,
         display:'none'
       })
+      open.onclick = () =>{
+        TweenMax.to('.menu-list',0.5,{
+          opacity:1,
+          display:'block'
+        })
+      }
+      close.onclick = () =>{
+        TweenMax.to('.menu-list',0.5,{
+          opacity:0,
+          display:'none'
+        })
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
@@ -159,11 +161,16 @@ export default {
       width: calc(100vw - 40%);
       height: 100vh;
       &__list{
+
         @include full_size;
         @include middle;
         flex-direction: column;
         &__item{
           margin-top: 3rem;
+          transform: rotate(10deg);
+          a{
+            font-size: 3rem;
+          }
         }
         &__item:first-child{
           margin-top: 0px;
@@ -175,15 +182,23 @@ export default {
       height: 100vh;
       object-fit: cover;
       background-position: center center;
+        background: $primary;
+
     }
   }
+
+</style>
+
+<style lang="scss" scoped>
   @include mq(sm) {
     .menu-bar{
       height: 5rem;
+        background: #00000000;
       &__wrap{
         @include full_size;
         position: relative;
         height: 5rem;
+
       }
       &__logo{
         display: none;
