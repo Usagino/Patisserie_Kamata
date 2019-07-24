@@ -2,17 +2,22 @@
   <no-ssr>
     GmapMap(:center="center" :zoom="zoom" style="width: 100%; height: 600px;"
       )
-      GmapMarker(:position="{lat: 35.5712931, lng: 139.7126375}" :icon="markerOptions") パティスリーマノ
-      GmapMarker(:position="{lat: 35.564669, lng: 139.7123632}") ルージュブランシュ 蒲田店
-      GmapMarker(:position="{lat: 35.5660952, lng: 139.720335}") ナオヒラ
-      GmapMarker(:position="{lat: 35.557435, lng: 139.7231873}") ベルフィーユ
+      GmapMarker(:position="{lat: 35.5712931, lng: 139.7126375}" :icon="mano_pos") パティスリーマノ
+      GmapMarker(:position="{lat: 35.564669, lng: 139.7123632}" :icon="Rouge_Blanche_pos") ルージュブランシュ 蒲田店
+      GmapMarker(:position="{lat: 35.5660952, lng: 139.720335}" :icon="naohira_pos") ナオヒラ
+      GmapMarker(:position="{lat: 35.557435, lng: 139.7231873}" :icon="bellefille_pos") ベルフィーユ
   </no-ssr>
 </template>
 
 <script>
   import mapstyle from '@/assets/json/mapstyle.json'
   import {gmapApi} from 'vue2-google-maps'
+
   const Mano = require('~/assets/icon/mano.png');
+  const bellefille = require('~/assets/icon/bellefille.png');
+  const naohira = require('~/assets/icon/naohira.png');
+  const Rouge_Blanche = require('~/assets/icon/Rouge_Blanche.png');
+
   export default {
     computed: {
       google: gmapApi
@@ -21,8 +26,23 @@
       return {
         center: {lat: 35.564405, lng:139.720248},
         zoom: 15,
-        markerOptions: {
+        mano_pos: {
           url: Mano,
+          size: {width: 111, height: 82, f: 'px', b: 'px',},
+          scaledSize: {width: 111, height: 82, f: 'px', b: 'px',},
+        },
+        bellefille_pos: {
+          url: bellefille,
+          size: {width: 111, height: 82, f: 'px', b: 'px',},
+          scaledSize: {width: 111, height: 82, f: 'px', b: 'px',},
+        },
+        naohira_pos: {
+          url: naohira,
+          size: {width: 111, height: 82, f: 'px', b: 'px',},
+          scaledSize: {width: 111, height: 82, f: 'px', b: 'px',},
+        },
+        Rouge_Blanche_pos: {
+          url: Rouge_Blanche,
           size: {width: 111, height: 82, f: 'px', b: 'px',},
           scaledSize: {width: 111, height: 82, f: 'px', b: 'px',},
         },
