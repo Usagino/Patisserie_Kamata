@@ -45,15 +45,6 @@
           h1.title__text MAP
           p.title__subtext 地図
         vueMap
-        .map__view
-          a(href="/").map__view__item.map__view__bellefille
-            img(src="/image/map/bellefille.png")
-          a(href="/").map__view__item.map__view__mano
-            img(src="/image/map/mano.png")
-          a(href="/").map__view__item.map__view__naohira
-            img(src="/image/map/naohira.png")
-          a(href="/").map__view__item.map__view__rouge
-            img(src="/image/map/Rouge_Blanche.png")
         .map__list
           .map__list__item(v-for="(shop,index) in shop_list" :key="index")
             h2 {{shop.name}}
