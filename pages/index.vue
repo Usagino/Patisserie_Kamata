@@ -2,7 +2,7 @@
   section.container
     vue_menu
     .first
-      video.first__movie(src="/image/cake.mp4" poster="/image/dummy.padding" autoplay loop muted)
+      video.first__movie(src="/image/cake.mp4" poster="/image/dummy.png" autoplay loop muted playsinline)
       img(src="image/logo_white.svg")
     .movie
       .movie__bg
