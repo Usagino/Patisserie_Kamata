@@ -4,20 +4,7 @@
     .first
       video.first__movie(src="/image/cake.mp4" poster="/image/dummy.png" autoplay loop muted playsinline)
       img(src="image/logo_white.svg")
-      GmapMap(
-        :center="{lat:10, lng:10}"
-        :zoom="7"
-        map-type-id="terrain"
-        style="width: 500px; height: 300px"
-        )
-        GmapMarker(
-          :key="index"
-          v-for="(m, index) in markers"
-          :position="m.position"
-          :clickable="true"
-          :draggable="true"
-          @click="center=m.position"
-          )
+
     .movie
       .movie__bg
       .movie__wrap
@@ -52,6 +39,15 @@
           link_button(link="shops")
         .gallery__bg
     .map
+      GmapMap(
+        :center="{lat:35.562487, lng:139.716074}"
+        :zoom="14"
+        map-type-id="terrain"
+        style="width: 100% ; height: 300px"
+        )
+        GmapMarker(
+          :position="google && new google.maps.LatLng(35.562487, 139.716074)"
+          )
       .map__wrap
         .title
           h1.title__text MAP
