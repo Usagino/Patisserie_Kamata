@@ -20,8 +20,21 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    extend(config, ctx) {
+      config.externals = config.externals || [];
+      if (!ctx.isClient) {
+        config.externals.splice(0, 0, function(context, request, callback) {
+          if (/^vue2-google-maps($|\/)/.test(request)) {
+            callback(null, false);
+          } else {
+            callback();
+          }
+        });
+      }
     }
   },
+  vendor: ['vue2-google-maps'],
   server: {
     port: 3000
   },
@@ -39,9 +52,9 @@ module.exports = {
     '@/assets/style/reset.css',
   ],
   plugins: [
-    { src: '~/plugins/vue-carousel', ssr: false }
+    { src: '~/plugins/vue-carousel', ssr: false },
+    { src: '~/plugins/vue2-google-maps.js', ssr: false }
   ],
-
   webfontloader: {
     google: {
       families: ['Sawarabi+Mincho','kokoro','hannari']

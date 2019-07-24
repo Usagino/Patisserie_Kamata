@@ -242,7 +242,7 @@
         }
       }
       &__thanks{
-        padding: 6rem 0;
+        padding: 2rem;
       }
     }
   }

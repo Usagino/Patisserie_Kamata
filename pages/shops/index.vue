@@ -5,7 +5,7 @@
       .shops__title
         h1 SHOP
       .shops__list
-        .shops__list__item(v-for="(shop,index) in shop_list" :key="index")
+        nuxt-link.shops__list__item(v-for="(shop,index) in shop_list" :key="index" :to='"/shops/" + index')
           h1 {{shop.name}}
           p {{shop.adress}}
           p {{shop.tell}}
@@ -65,6 +65,7 @@
       margin: auto;
       &__item{
         border-bottom: 0.5px solid #{$text_color}cc;
+        display: block;
         &:last-child{
           border-bottom: 0rem;
         }
