@@ -11,7 +11,7 @@
           h1.movie__title__text ABOUT
           span.movie__title__bar
         .movie__contents
-          <iframe width="680" height="400" src="https://www.youtube.com/embed/vWaRiD5ym74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/b3rpFousaOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         .movie__description
           .movie__description__text
             h1 「東京は蒲田にある素敵なケーキ屋さん」を紹介するサイトです。

@@ -77,12 +77,12 @@
         shop_list: shops
       }
     },
-    // mounted () {
-    //   this.$nextTick(() => {
-    //     this.$nuxt.$loading.start()
-    //     setTimeout(() => this.$nuxt.$loading.finish(), 9000)
-    //   })
-    // }
+    mounted () {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+      })
+    }
   }
 </script>
 <style>
@@ -389,8 +389,8 @@
           }
       }
       &__contents{
-        width: 100%;
-        height: 300px;
+        width: 90%;
+        height: 180px;
         iframe{
           width: 100%;
           height: 100%;
