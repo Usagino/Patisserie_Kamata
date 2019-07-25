@@ -13,7 +13,7 @@
           img.movie__title__logo(src="/image/logo.svg")
           span.movie__title__bar
         .movie__contents
-          <iframe width="680" height="400" src="https://www.youtube.com/embed/vWaRiD5ym74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/b3rpFousaOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         .movie__description
           h1.movie__description__title ABOUT
           .movie__description__text
@@ -39,7 +39,6 @@
           link_button(link="shops")
         .gallery__bg
     .map
-
       .map__wrap
         .title
           h1.title__text MAP
@@ -78,12 +77,12 @@
         shop_list: shops
       }
     },
-    // mounted () {
-    //   this.$nextTick(() => {
-    //     this.$nuxt.$loading.start()
-    //     setTimeout(() => this.$nuxt.$loading.finish(), 9000)
-    //   })
-    // }
+    mounted () {
+      this.$nextTick(() => {
+        this.$nuxt.$loading.start()
+        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+      })
+    }
   }
 </script>
 <style>
@@ -94,26 +93,7 @@
 
 
 <style lang="scss" scoped>
-  .title{
-    padding: 2rem;
-    &__text{
-      color: $primary_daken;
-      text-align: center;
-    }
-    &__subtext{
-      color: $primary_daken;
-      text-align: center;
-      @include middle;
-      &:after,&:before{
-        margin: 0 1rem;
-        width: 3rem;
-        height: 1px;
-        display: inline-block;
-        content: "";
-        background: $primary_daken;
-      }
-    }
-  }
+
 
   .first{
     width: 100%;

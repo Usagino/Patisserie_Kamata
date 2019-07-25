@@ -6,10 +6,19 @@
       style="width: 100%; height: 600px;"
       :options="options"
       )
-      GmapMarker(:clickable="true" :position="{lat: 35.5712931, lng: 139.7126375}" :icon="mano_pos") パティスリーマノ
-      GmapMarker(:clickable="true" :position="{lat: 35.564669, lng: 139.7123632}" :icon="Rouge_Blanche_pos") ルージュブランシュ 蒲田店
-      GmapMarker(:clickable="true" :position="{lat: 35.5660952, lng: 139.720335}" :icon="naohira_pos") ナオヒラ
-      GmapMarker(:clickable="true" :position="{lat: 35.557435, lng: 139.7231873}" :icon="bellefille_pos") ベルフィーユ
+      .naohira(v-if="num === 0")
+        GmapMarker(:clickable="true" :position="{lat: 35.5660952, lng: 139.720335}" :icon="naohira_pos") ナオヒラ
+      .mano(v-else-if="num === 1")
+        GmapMarker(:clickable="true" :position="{lat: 35.5712931, lng: 139.7126375}" :icon="mano_pos") パティスリーマノ
+      .Rouge(v-else-if="num === 2")
+        GmapMarker(:clickable="true" :position="{lat: 35.564669, lng: 139.7123632}" :icon="Rouge_Blanche_pos") ルージュブランシュ 蒲田店
+      .bell(v-else-if="num === 3")
+        GmapMarker(:clickable="true" :position="{lat: 35.557435, lng: 139.7231873}" :icon="bellefille_pos") ベルフィーユ
+      .all(v-else)
+        GmapMarker(:clickable="true" :position="{lat: 35.5712931, lng: 139.7126375}" :icon="mano_pos") パティスリーマノ
+        GmapMarker(:clickable="true" :position="{lat: 35.564669, lng: 139.7123632}" :icon="Rouge_Blanche_pos") ルージュブランシュ 蒲田店
+        GmapMarker(:clickable="true" :position="{lat: 35.5660952, lng: 139.720335}" :icon="naohira_pos") ナオヒラ
+        GmapMarker(:clickable="true" :position="{lat: 35.557435, lng: 139.7231873}" :icon="bellefille_pos") ベルフィーユ
   </no-ssr>
 </template>
 
@@ -20,6 +29,12 @@
   export default {
     computed: {
       google: gmapApi
+    },
+    props:{
+      num:Number,
+    },
+    mounted(){
+      console.log(this.num);
     },
     data(){
       return {

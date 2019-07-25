@@ -16,8 +16,16 @@ a:hover{
     margin-left: 0px !important;
   }
 }
-
+*{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
 body {
+  h1{
+    font-size: 3rem;
+  }
   h1,h2,h3,a{
     color: $bg_white;
     font-weight: normal;
@@ -27,5 +35,25 @@ body {
     color: $bg_white;
     font-size: 14px;
     font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  }
+}
+.title{
+  padding: 2rem;
+  &__text{
+    color: $text_color;
+    text-align: center;
+  }
+  &__subtext{
+    color: $text_color;
+    text-align: center;
+    @include middle;
+    &:after,&:before{
+      margin: 0 1rem;
+      width: 3rem;
+      height: 1px;
+      display: inline-block;
+      content: "";
+      background: $text_color;
+    }
   }
 }

@@ -59,7 +59,7 @@ module.exports = {
   ],
   webfontloader: {
     google: {
-      families: ['Sawarabi+Mincho','kokoro','hannari']
+      families: ['Sawarabi+Mincho','kokoro','hannari','Great+Vibes']
     }
   },
   loading: '~/components/loading.vue',

@@ -2,7 +2,8 @@
   section.container
     vue_menu
     .first
-      img(src="/image/logo.svg")
+      img(src="/image/logo_white.svg")
+      p Kamata has many warm places that are loved by the local community and can make everyone smile. In this website, you will find out more about Kamata cake shops - patisserie NAOHIRA, patisserie MANO, Rouge Blanche and Belle Fille
     .movie
       .movie__bg
       .movie__wrap
@@ -45,12 +46,20 @@
 <style lang="scss" scoped>
   .first{
     background: $primary;
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     @include middle;
+    background-image: url("/image/about_back.png");
+    flex-direction: column;
     img{
       height: 10vh;
       width: auto;
+      padding-bottom: 2rem;
+    }
+    p{
+      font-family: 'Great Vibes', cursive;
+      max-width: 500px;
+      text-align: center;
     }
   }
 

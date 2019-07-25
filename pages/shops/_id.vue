@@ -1,13 +1,14 @@
 <template lang="pug">
   section.container
     vue_menu
-    .first(v-bind:style="'background-image: url(/image/shop/'+ $route.params.id +'_2.png)'")
+    .first(v-bind:style="'background-image: url(/image/back/'+ $route.params.id +'.png)'")
       h1 {{ shop_list[$route.params.id].name }}
     .single
       .single__box
         .single__box__text
           h1 {{ shop_list[$route.params.id].name }}
           p {{ shop_list[$route.params.id].single.introduce }}
+          p {{ shop_list[$route.params.id].single_en.introduce }}
         .single__box__image
           img(:src='"/image/shop/"+ $route.params.id +"_1.png"')
           img(:src='"/image/shop/"+ $route.params.id +"_1.png"').shadow
@@ -19,17 +20,27 @@
         .single__box__text
           h1 おすすめ商品
           p {{ shop_list[$route.params.id].single.recommend }}
+          p {{ shop_list[$route.params.id].single_en.recommend }}
 
       .single__box
         .single__box__text
           h1 お店へのこだわり
           p {{ shop_list[$route.params.id].single.commit }}
+          p {{ shop_list[$route.params.id].single_en.commit }}
         .single__box__image
           img(:src='"/image/shop/"+ $route.params.id +"_3.png"')
           img(:src='"/image/shop/"+ $route.params.id +"_3.png"').shadow
-
-
-
+    .map
+      .map__wrap
+        .title
+          h1.title__text MAP
+          p.title__subtext 地図
+        vueMap(:num="Number($route.params.id)")
+        .map__info
+          h1 {{ shop_list[$route.params.id].name }}
+          p {{ shop_list[$route.params.id].adress }}
+          p {{ shop_list[$route.params.id].tell }}
+          p {{ shop_list[$route.params.id].website }}
     vue_footer
 </template>
 
@@ -39,15 +50,17 @@
   import vue_footer from '@/components/vueFooter';
   // library
   import shops from '@/assets/json/shops.json';
+  import vueMap from '@/components/vueMap'
 
   export default {
     components: {
       vue_menu,
       vue_footer,
+      vueMap,
     },
     data(){
       return {
-        shop_list: shops
+        shop_list: shops,
       }
     },
     mounted () {
@@ -72,7 +85,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    @include middle;
+    position: relative;
+
+    h1{
+      position: absolute;
+      bottom: 5rem;
+      left: 0;
+      background: $primary_daken;
+      font-size: 4rem;
+      padding: 0 5rem;
+    }
   }
   .single{
     padding: 6rem 20vw;
@@ -106,6 +128,12 @@
             content: " ";
           }
         }
+        p{
+          padding-bottom: 2rem;
+        }
+        *:last-child{
+          padding-bottom: 0rem;
+        }
 
       }
       &__image{
@@ -128,10 +156,37 @@
       }
     }
   }
-
-
-
+  .map{
+    &__view{
+      background-image: url("/image/map/map.png");
+      background-repeat: no-repeat;
+      background-attachment: local;
+      background-size: cover;
+      width: 100%;
+      height: 70vh;
+      position: relative;
+      &__item{
+        position: absolute;
+        img{
+          width: 120px;
+          height: auto;
+        }
+      }
+    }
+    &__info{
+      width: 350px;
+      margin: auto;
+      padding: 2rem 0;
+      h1,p{
+        color: $text_color;
+      }
+      h1{
+        padding: 1rem 0;
+      }
+    }
+  }
 </style>
+
 <style lang="scss" scoped>
   @include mq(sm){
     .first{

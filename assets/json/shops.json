@@ -11,13 +11,13 @@
       "commit":"地域の方に愛される、あまり堅苦しくないお店を目指して、小さいお子さまからお年寄りまでが楽しんでいただけるお菓子を提供しいます。また、ブルーのテントが目印の外装から店内までいたるところに工夫がされておりショーケースには、かわいいお菓子がいっぱい並んでおり見るだけでも楽しめるそんなお店です。"
     },
     "single_en":{
-      "introduce":"text",
-      "recommend":"text",
-      "commit":"text"
+      "introduce":"Patisserie NAOHIRA combining Europe’s ingredients with traditional Japanese food ingredients to bake their pastries inside the store. All the Europe’s ingredients are carefully selected and it’s high quality. The open kitchen of NAOHIRA is also one of the attraction. Apart from pastries, NAOHIRA also have others sweets which is highly recommend for souvenirs.",
+      "recommend":"NAOHIRA famous product Kamata Castella is made of fine-grained Japanese sugar – Wasanbon (Wasanbon is traditionally made in the Shikoku prefectures of Tokushima and Kagawa). Kamata Castella is designed to be donut shape, which is easy for customer to eat.",
+      "commit":"NAOHIRA offer pastries and sweets that can be enjoyed by children and the elderly, aiming to be a store loved by the local community. In addition, from the blue shop canopy to the showcase inside of the store, NAOHIRA is such a shop that you can enjoy just by looking at a lot of cute sweets lined up."
     }
   },
   {
-    "name": "patisserie MANO",
+    "name": "Patisserie MANO",
     "adress": "東京都大田区蒲田2-18-22 TACビル1F",
     "tell": "03-6424-5033",
     "website": "https://tabelog.com/tokyo/A1317/A131714/13135376/",
@@ -28,9 +28,9 @@
       "commit":"素材にこだわりをもち、本当においしいものだけを届けたいといシェフの思いから当店のケーキは全て一から手作りで作り上げるというこだわりがあります。"
     },
     "single_en":{
-      "introduce":"text",
-      "recommend":"text",
-      "commit":"text"
+      "introduce":"Patisserie MANO is owned by Hiroshi Mano, a former chef patisserie of Apiciu s - one of Japan's leading French restaurants. In Patisserie MANO, you can order a birthday cakes that made with a variety of techniques from French confectionery.",
+      "recommend":"For people who love French pastries and sweets, Patisserie MANO provide an assortment of cakes and pastries and goodies with the popular Salt sablé, Coconut meringue, Madeleine, Pain aux raisins, Almond pie, Financier, Butter Cookies.",
+      "commit":"Mano chef's original Earl Grey Tea cake is a fragrant tea-flavored butter cake baked with orange skin. The tea used is made from the powder of the leaves and the extracted essence, and it prepare just before baking so that the smell and flavour does not go away. In addition, Grand Marnier is used at the final stage while the cake is hot. The cake keeps the flavour of Grand Marnier by removing the alcohol parts from the heat."
     }
   },
   {
@@ -45,9 +45,9 @@
       "commit":"素材と手作りにこだわりをもち、本当においしいものだけを届けたいといシェフの思いから当店のケーキは全て一から手作りで作り上げるというこだわりがあります。 生菓子はオールフレッシュクリームと国産苺、焼き菓子は全てにバターを使用するなど、素材にも妥協しない本格スイーツを楽しめます。"
     },
     "single_en":{
-      "introduce":"text",
-      "recommend":"text",
-      "commit":"text"
+      "introduce":"Rouge Blanche located in 3-minute walk away from Kamata station’s west exit, with its red sign board and white exterior conspicuous design. Rouge Blanche owner was trained in France and Tokyo, and opening Rouge Blanche is his dream. Rouge Blanche has gained a high reputation in the social media. Rouge Blanche pastries and sweets is used for television shows and film, such as creating a cake for “Bistro SMAP” and its parfait is used in a dancing film.",
+      "recommend":"Rouge Blanche put their hearts into making all of their product. Such as Strawberry shortcakes with pure cream and popular roll cake. Strawberry shortcake’s cream is very delicious; customer seems to be surrounded by happiness whenever they having it. Products such as fresh confectionery, baked goods, chocolates, custom wedding cakes, and crafts are also recommended.",
+      "commit":"Rouge Blanche are particular about making our cakes from scratch because they are particular about ingredients and handmade products. In addition, owner want to deliver only the truly delicious ones. Customer can enjoy the real sweets that do not compromise on the ingredients, such as all fresh cream, domestic strawberries and butter for every product. "
     }
   },
   {
@@ -62,9 +62,9 @@
       "commit":"南蒲田で店を始めて25年。独自にブレンドした数種類のブランデーを用いてつくられるブランデーケーキは、数ある同製品の中でもとりわけ生地がなめらかで口溶けの良いことが特徴です。材料となるはちみつは、羽田の小学校の屋上で採取されたものを使用。地域との連携によって生まれた極上の味わいです。"
     },
     "single_en":{
-      "introduce":"text",
-      "recommend":"text",
-      "commit":"text"
+      "introduce":"Belfiil, a domestic cake shop with a beautiful, adorable pink outlook. When customer get in to the stop, you'll find out there is a line of charming cakes, just like the store. Belfiil also sell baked product such as cookies. Belfiil is open until late night, so customer can buy a delicious cake even in late evening on your way home from work.",
+      "recommend":"In Belfiil , Mille-feuille, sanded with rich custard cream in crispy pies is highly recommended. Simple design but the taste is condensed. Also, customer can also enjoy Mont Blanc, tea mousse and classic French Chocolate Mousse in a rare shape. There are also jelly and pudding.",
+      "commit":"It has been 25 years since Belfiil started in South Kamata. Brandy cakes made with several unique lysis are characterized by the smoothness of the dough and the melting of the mouth among the many of the same products. The honey which Belfiil used for baking pastries and goodies was collected on the roof of an elementary school in Haneda. It is the best taste born by cooperation with the local community."
     }
   }
 ]
