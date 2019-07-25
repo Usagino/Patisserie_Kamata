@@ -54,3 +54,8 @@ $breakpoints: (
     margin-left: 0px
   }
 }
+@include mq(sm){
+  h1{
+    font-size: 1.5rem !important;
+  }
+}

@@ -77,18 +77,23 @@
         shop_list: shops
       }
     },
-    mounted () {
-      this.$nextTick(() => {
-        this.$nuxt.$loading.start()
-        setTimeout(() => this.$nuxt.$loading.finish(), 9000)
-      })
-    }
+    // mounted () {
+    //   this.$nextTick(() => {
+    //     this.$nuxt.$loading.start()
+    //     setTimeout(() => this.$nuxt.$loading.finish(), 9000)
+    //   })
+    // }
   }
 </script>
 <style>
-.VueCarousel-pagination {
-  display: none !important;
-}
+  .VueCarousel-pagination {
+    display: none !important;
+  }
+  @include mq(sm){
+    h1{
+      font-size: 1.5rem !important;
+    }
+  }
 </style>
 
 
