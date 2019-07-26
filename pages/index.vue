@@ -18,7 +18,7 @@
           h1.movie__description__title ABOUT
           .movie__description__text
             p ”Patisserie_Kamata.”は、蒲田にあるケーキ屋さんを紹介するサイトです。
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            p 蒲田には、地域に愛される、みんなが笑顔になれる暖かい場所がたくさんあります。その中で私たちは、ケーキ屋さんに注目してみました。このサイトでは、「Patisserie NAOHIRA」、「patisserie MANO」、「Rouge Blanche」、「Belle Fille」さんに取材協力させていただきました。このサイトを見て、足を運んでみたいなと思ったお店があったなら、是非足を運んでみてください。
             link_button(link="about")
     .gallery
       .gallery__wrap
@@ -390,7 +390,7 @@
       }
       &__contents{
         width: 90%;
-        height: 180px;
+        height: 170px;
         iframe{
           width: 100%;
           height: 100%;

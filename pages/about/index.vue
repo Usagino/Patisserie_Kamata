@@ -16,8 +16,8 @@
           .movie__description__text
             h1 「東京は蒲田にある素敵なケーキ屋さん」を紹介するサイトです。
             p 蒲田にある素敵なケーキ屋さんを紹介するサイトです。このサイトでは、「Patisserie NAOHIRA」、「patisserie MANO」、「Rouge Blanche」、「Belle Fille」に取材協力させていただきました。
-            p 地域に愛される、みんなが笑顔になれる暖かい場所が蒲田にはたくさんあり、
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            p 蒲田には、地域に愛される、みんなが笑顔になれる暖かい場所がたくさんあります。その中で私たちは、ケーキ屋さんに注目してみました。このサイトでは、「Patisserie NAOHIRA」、「patisserie MANO」、「Rouge Blanche」、「Belle Fille」さんに取材協力させていただきました。このサイトを見て、足を運んでみたいなと思ったお店があったなら、是非足を運んでみてください。
+            p Kamata has many warm places that are loved by the local community and can make everyone smile. In this website, you will find out more about Kamata cake shops - patisserie NAOHIRA, patisserie MANO, Rouge Blanche and Belle. If you want to visit any of these shops, please feel free to visit and enjoy.
         .movie__thanks
           p Special Thanks
           p 「Patisserie NAOHIRA」「patisserie MANO」「Rouge Blanche」「Belle Fille」(順不同)
@@ -73,7 +73,7 @@
       z-index: -1;
       content: "";
       width: 100%;
-      height: 80vh;
+      height: 120vh;
       background: $primary_daken;
     }
     &__wrap{
