@@ -145,7 +145,7 @@
       z-index: -1;
       content: "";
       width: 100%;
-      height: 60vh;
+      height: 80vh;
       background: $primary_daken;
     }
     &__wrap{
