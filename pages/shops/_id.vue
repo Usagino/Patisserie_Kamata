@@ -197,7 +197,12 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
+          background-position: center;
       @include middle;
+      h1{
+        bottom: 0;
+            padding: 0 1rem;
+      }
     }
     .single{
       padding: 6rem 10vw;
