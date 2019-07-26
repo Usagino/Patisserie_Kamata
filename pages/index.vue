@@ -17,9 +17,9 @@
         .movie__description
           h1.movie__description__title ABOUT
           .movie__description__text
-            p ”Patisserie_Kamata.”は、蒲田にあるケーキ屋さんを紹介するサイトです。
-            p 蒲田には、地域に愛される、みんなが笑顔になれる暖かい場所がたくさんあります。その中で私たちは、ケーキ屋さんに注目してみました。このサイトでは、「Patisserie NAOHIRA」、「patisserie MANO」、「Rouge Blanche」、「Belle Fille」さんに取材協力させていただきました。このサイトを見て、足を運んでみたいなと思ったお店があったなら、是非足を運んでみてください。
-            link_button(link="about")
+            p 蒲田には、地域に愛される、tがたくさんあります。その中でケーキ屋さんに注目してみました。このサイトでは、「Patisserie NAOHIRA」、「Patisserie MANO」、「Rouge Blanche」、「Belle Fille」さんに...
+            p Kamata has many warm places that are loved by the local community and can make everyone smile. In this website, you will find out more about Kamata cake shops - patisserie NAOHIRA, patisserie MANO, Rouge Blanche and Belle Fille
+            link_button(link="/about")
     .gallery
       .gallery__wrap
         .title
@@ -85,6 +85,7 @@
     }
   }
 </script>
+
 <style>
   .VueCarousel-pagination {
     display: none !important;
@@ -98,8 +99,6 @@
 
 
 <style lang="scss" scoped>
-
-
   .first{
     width: 100%;
     height: 100vh;
@@ -265,7 +264,7 @@
           font-size: 3rem;
         }
         img{
-          height: 70vh;
+          height: 50vh;
           width: 70vw;
           object-fit: cover;
         }
@@ -410,10 +409,14 @@
         }
         &__text{
           &__link{
-            margin-top: 3rem;
+            margin-top: 0rem;
             display: flex;
             justify-content: flex-end;
             flex-direction: row;
+            .link{
+              @include middle;
+
+            }
             &__text{
               margin-right: 1rem;
             }
@@ -477,16 +480,20 @@
           @include full_size;
           display: flex;
           justify-content: flex-end;
+          @include middle;
           h1{
             position: absolute;
             top: 0;bottom: 0;
-            left: 0.5rem;
+            left: 0; right: 0;
             z-index: 1;
             display: inline-block;
-            height: 4rem;
+            height: 2.5rem;
             width: auto;
             margin: auto;
-            font-size: 3rem;
+            font-size: 2rem;
+          }
+          img{
+            height: 70vw
           }
         }
       }
