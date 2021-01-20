@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "nuxt": "^2.0.0",
     "nuxt-device-detect": "^1.1.5",
     "nuxt-sass-resources-loader": "^2.0.5",
